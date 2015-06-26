@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////
 
 // v1.1 12-mode w/ Button selection
-// Rainbow, Rainbow Stripe, Party, Heat, Ocean, Forrest, Cloud, White, Pink, Caution, Fire, Pyro, LEO
+// Rainbow, Rainbow Stripe, Party, Heat, Ocean, Forrest, Cloud, White, Pink, Red, Caution, Fire, Pyro, LEO
 // With help from GyroGearloose, Jarrod Wagner and Jarrod Hiscock
  
 //INCLUDE LIBRARIES//
