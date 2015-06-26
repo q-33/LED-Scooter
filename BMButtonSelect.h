@@ -2,7 +2,8 @@
 ///////// LED SCOOTER BURNING MAN 2015 w/ BUTTON //////////
 ///////////////////////////////////////////////////////////
 
-// v1.0 Button 
+// v1.1 12-mode w/ Button selection
+// Rainbow, Rainbow Stripe, Party, Heat, Ocean, Forrest, Cloud, White, Pink, Caution, Fire, Pyro, LEO
 // With help from GyroGearloose, Jarrod Wagner and Jarrod Hiscock
  
 //INCLUDE LIBRARIES//
@@ -49,7 +50,7 @@ void setup() {
  }
  
 //DEFINE NUMBER OF EFFECTS//
-#define NUM_MODES 11                                       //Change this to max number of effects
+#define NUM_MODES 13                                       //Change this to max number of effects
  
 //MAIN LOOP//
 void loop() {
@@ -61,13 +62,14 @@ void loop() {
        case 3: BRIGHTNESS=128; HeatColors(); break;
        case 4: BRIGHTNESS=128; Ocean(); break;
        case 5: BRIGHTNESS=128; Forest(); break;
-       case 5: BRIGHTNESS=128; Cloud(); break;
-       case 6: BRIGHTNESS=240; Flashlight(); break;
-       case 7: BRIGHTNESS=128; Pink(); break;
-       case 8: BRIGHTNESS=240; blink(CRGB::Orange, CRGB::Black, 1000); break;
-       case 9: BRIGHTNESS=240; blink(CRGB::Red, CRGB::White, 250); break;
-       case 10: BRIGHTNESS=255; blink(CRGB::Red, CRGB::Orange, 100); break;
-       case 11: BRIGHTNESS=240; blink(CRGB::Red,CRGB::Blue, 250); break;
+       case 6: BRIGHTNESS=128; Cloud(); break;
+       case 7: BRIGHTNESS=240; White(); break;
+       case 8: BRIGHTNESS=128; Pink(); break;
+       case 9: BRIGHTNESS=128; Red(); break;
+       case 10: BRIGHTNESS=240; blink(CRGB::Orange, CRGB::Black, 1000); break;
+       case 11: BRIGHTNESS=240; blink(CRGB::Red, CRGB::White, 250); break;
+       case 12: BRIGHTNESS=255; blink(CRGB::Red, CRGB::Orange, 100); break;
+       case 13: BRIGHTNESS=240; blink(CRGB::Red,CRGB::Blue, 250); break;
 }  
  
 //BUTTON MANAGEMENT//
@@ -176,7 +178,7 @@ void FillLEDsFromPaletteColors( uint8_t colorIndex) {
 }
  
 //White solid
-void Flashlight() {
+void White() {
    fill_solid(leds, NUM_LEDS, CRGB::White);  
    FastLED.show();
 }
@@ -188,7 +190,7 @@ void Pink() {
 }
  
 //Red solid
-void Redlight() {
+void Red() {
    fill_solid(leds, NUM_LEDS, CRGB::Red);  
    FastLED.show();
 }
